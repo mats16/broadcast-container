@@ -31,6 +31,6 @@ ENV SCREEN_WIDTH=1280 \
 
 COPY pulse/default.pa /etc/pulse/default.pa
 COPY firefox/syspref.js  /usr/lib/firefox/browser/defaults/preferences/syspref.js
-COPY supervisord.conf /etc/supervisor/supervisord.conf
+COPY supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
