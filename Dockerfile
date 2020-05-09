@@ -19,8 +19,8 @@ RUN adduser --disabled-password --system broadcast && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ENV SCREEN_WIDTH=1280 \
-    SCREEN_HEIGHT=720 \
+ENV SCREEN_WIDTH=1920 \
+    SCREEN_HEIGHT=1080 \
     COLOR_DEPTH=24 \
     X_SERVER_NUM=2 \
     VIDEO_BITRATE=2500k \
