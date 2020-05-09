@@ -22,7 +22,7 @@ RUN adduser --disabled-password --system broadcast && \
 ENV SCREEN_WIDTH=1280 \
     SCREEN_HEIGHT=720 \
     COLOR_DEPTH=24 \
-    ENV_X_SERVER_NUM=2 \
+    X_SERVER_NUM=2 \
     VIDEO_BITRATE=2500k \
     VIDEO_FRAMERATE=30 \
     VIDEO_GOP=60 \
