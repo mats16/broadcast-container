@@ -28,7 +28,8 @@ ENV SCREEN_WIDTH=1920 \
     VIDEO_GOP=60 \
     AUDIO_BITRATE=128k \
     AUDIO_SAMPLERATE=44100 \
-    AUDIO_CHANNELS=2
+    AUDIO_CHANNELS=2 \
+    FFMPEG_THREADS_NUM=0
 
 COPY pulse/default.pa /etc/pulse/default.pa
 COPY firefox/syspref.js  /usr/lib/firefox/browser/defaults/preferences/syspref.js
