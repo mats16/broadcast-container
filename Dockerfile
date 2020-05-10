@@ -23,12 +23,16 @@ ENV SCREEN_WIDTH=1920 \
     SCREEN_HEIGHT=1080 \
     COLOR_DEPTH=24 \
     X_SERVER_NUM=2 \
-    VIDEO_BITRATE=2500k \
+    VIDEO_BITRATE=4500k \
+    VIDEO_MINRATE=0 \
+    VIDEO_MAXRATE=0 \
+    VIDEO_BUFSIZE=0 \
     VIDEO_FRAMERATE=30 \
     VIDEO_GOP=60 \
     AUDIO_BITRATE=128k \
     AUDIO_SAMPLERATE=44100 \
-    AUDIO_CHANNELS=2
+    AUDIO_CHANNELS=2 \
+    FFMPEG_THREADS_NUM=0
 
 COPY pulse/default.pa /etc/pulse/default.pa
 COPY firefox/syspref.js  /usr/lib/firefox/browser/defaults/preferences/syspref.js
