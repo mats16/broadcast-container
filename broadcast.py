@@ -25,8 +25,8 @@ audio_bitrate = os.getenv('AUDIO_BITRATE', '128k')
 audio_samplerate = os.getenv('AUDIO_BITRATE', 44100)
 audio_channels = os.getenv('AUDIO_CHANNELS', 2)
 
-meeting_pin = os.getenv('MEETING_PIN', None)
-browser_url = os.getenv('BROWSER_URL', f'https://app.chime.aws/portal/{meeting_pin}')
+chime_pin = os.getenv('CHIME_PIN', None)
+browser_url = os.getenv('BROWSER_URL', f'https://app.chime.aws/portal/{chime_pin}')
 rtmp_url = os.getenv('RTMP_URL')
 
 logger = logging.getLogger(__name__)
@@ -39,7 +39,7 @@ options.add_argument('--no-sandbox')
 options.add_argument('--autoplay-policy=no-user-gesture-required')
 options.add_argument(f'---window-size={screen_width},{screen_height}')
 options.add_argument('--start-fullscreen')
-options.add_experimental_option("excludeSwitches", ['enable-automation']);
+options.add_experimental_option("excludeSwitches", ['enable-automation'])
 
 
 if __name__=='__main__':
@@ -96,7 +96,7 @@ if __name__=='__main__':
     out.run_async(pipe_stdin=True)
 
     while True:
-        if meeting_pin and driver.current_url == 'https://app.chime.aws/portal/ended':
+        if chime_pin and driver.current_url == 'https://app.chime.aws/portal/ended':
             logger.info('This meeting is ended.')
             break
         else:
